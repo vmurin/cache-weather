@@ -8,7 +8,7 @@
     {
       "name": "cache-weather",
       "source": "./",
-      "description": "Prompt-cache countdown, cache hit rate, context weather and weekly limit in the hint line under the prompt."
+      "description": "Prompt-cache countdown, cache hit rate, context weather and weekly limit in the permission-mode line under the prompt (not the status line)."
     }
   ]
 }

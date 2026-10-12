@@ -1,7 +1,7 @@
 {
   "name": "cache-weather",
   "version": "0.2.1",
-  "description": "Prompt-cache countdown, cache hit rate and context weather in the hint line under the prompt.",
+  "description": "Prompt-cache countdown, cache hit rate, context weather and weekly limit in the permission-mode line under the prompt (not the status line).",
   "author": {
     "name": "Vlad Murin"
   },

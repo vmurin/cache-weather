@@ -1,8 +1,8 @@
 # cache-weather
 
-A tiny Claude Code plugin that shows the prompt-cache countdown, the cache hit rate, how full the context is and your weekly limit, in the line under the prompt.
+A tiny Claude Code plugin that shows the prompt-cache countdown, the cache hit rate, how full the context is and your weekly limit in the **permission-mode line**, the row under the prompt that shows `⏵⏵ auto mode on`. It is not your status line, which it leaves alone.
 
-![The hint line under the Claude Code prompt with the cache-weather segment](docs/hint-line.svg)
+![The permission-mode line under the Claude Code prompt with the cache-weather segment](docs/hint-line.svg)
 
 ## What it shows
 
@@ -17,7 +17,9 @@ A tiny Claude Code plugin that shows the prompt-cache countdown, the cache hit r
 
 ## Takes no extra space
 
-There is no new panel or band. The figures go at the end of Claude Code's own hint line under the prompt, the row that already shows the permission mode (`⏵⏵ auto mode on`). The mode pill stays Claude Code's own, in its own colour; only the `(shift+tab to cycle)` reminder is dropped.
+There is no new panel or band. The figures go at the end of the row that already shows the permission mode (`⏵⏵ auto mode on`). Claude Code's docs call this row the *status bar*, its plugin API the *prompt hint line*. The mode stays Claude Code's own, in its own colour; only the `(shift+tab to cycle)` reminder is dropped.
+
+It is a different row from the **status line** (`statusLine` in your settings), which sits above it. The plugin does not touch your status line, so you can keep your own.
 
 ## Why
 
