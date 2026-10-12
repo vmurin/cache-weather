@@ -9,9 +9,9 @@ A tiny Claude Code mod, installed as a plugin, that shows the prompt-cache count
 | Part | Meaning |
 | --- | --- |
 | ☀️ 🌧️ ⛈️ `ctx 29%` | How full the context window is, and its weather: sunny up to half the auto-compact threshold, rainy up to 80 % of it, stormy above. The weather follows the context only, never the cache |
-| `46 min` | Time left on the prompt cache (5 min or 1 h, whichever your session uses), counted from the last response. Green, yellow in the last quarter, red in the last tenth, `expired` at zero |
+| `46 min` | Time until the prompt cache expires. The cache lives for 5 min or 1 h after each response, depending on your session, and this counts down from that. Green, yellow in the last quarter, red in the last tenth, `expired` at zero |
 | `hit 90%` | Share of the last response's input tokens served from the cache |
-| `7d 66%` | Weekly (seven-day) usage limit |
+| `7d 66%` | Share of the weekly (seven-day) usage limit used so far |
 | `⏳ 16.10. 08:00` | When the weekly limit resets, in local time |
 
 ## Takes no extra space
@@ -23,9 +23,9 @@ It is a different row from the **status line** (`statusLine` in your settings), 
 ## Why
 
 - **Cache:** an expired cache makes the next request re-send the whole conversation at full price. The countdown tells you whether a pause has already cost you that.
-- **Hit rate:** a low hit rate means the cache is being rebuilt.
+- **Hit rate:** input read from the cache costs a tenth of the normal price, so a high rate means a cheap request. A low rate mid-conversation means the cache was rebuilt at extra cost, because it expired or something early in the prompt changed (another model, `/compact`, a new MCP server or tool).
 - **Context weather:** warns before auto-compaction kicks in, so you can `/compact` at a good moment yourself.
-- **Weekly limit:** how much of the week is left, and when it resets.
+- **Weekly limit:** how much of your weekly usage you have already spent, and when it resets.
 
 ## Install
 
