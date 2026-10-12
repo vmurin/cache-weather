@@ -74,7 +74,7 @@ for (const surface of SURFACES) {
     expect((await ui.find({ type: 'Text', text: '1 min' }))?.props.color).toBe('warning')
 
     await clock.advance(60_000)
-    expect((await ui.find({ type: 'Text', text: 'abgelaufen' }))?.props.color).toBe('inactive')
+    expect((await ui.find({ type: 'Text', text: 'expired' }))?.props.color).toBe('inactive')
   })
 }
 

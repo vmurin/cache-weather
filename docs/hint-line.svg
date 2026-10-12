@@ -11,5 +11,5 @@
   <text x="20" y="38"><tspan class="mode">⏵⏵ auto mode on</tspan><tspan class="dim"> · ☀️ </tspan><tspan class="fresh">46 min</tspan><tspan class="dim"> · hit 90% · ctx 29% · 7d 66% · ⏳︎ 16.10. 08:00</tspan></text>
   <text x="20" y="80"><tspan class="mode">⏵⏵ auto mode on</tspan><tspan class="dim"> · 🌧️ </tspan><tspan class="late">12 min</tspan><tspan class="dim"> · hit 97% · ctx 52% · 7d 66% · ⏳︎ 16.10. 08:00</tspan></text>
   <text x="20" y="122"><tspan class="mode">⏵⏵ auto mode on</tspan><tspan class="dim"> · ⛈️ </tspan><tspan class="critical">4 min</tspan><tspan class="dim"> · hit 99% · ctx 81% · 7d 67% · ⏳︎ 16.10. 08:00</tspan></text>
-  <text x="20" y="164"><tspan class="mode">⏵⏵ auto mode on</tspan><tspan class="dim"> · ⛈️ abgelaufen · hit 99% · ctx 81% · 7d 67% · ⏳︎ 16.10. 08:00</tspan></text>
+  <text x="20" y="164"><tspan class="mode">⏵⏵ auto mode on</tspan><tspan class="dim"> · ⛈️ expired · hit 99% · ctx 81% · 7d 67% · ⏳︎ 16.10. 08:00</tspan></text>
 </svg>

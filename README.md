@@ -9,7 +9,7 @@ A tiny Claude Code plugin that shows the prompt-cache countdown, the cache hit r
 | Part | Meaning |
 | --- | --- |
 | ☀️ 🌧️ ⛈️ | Context weather: sunny up to half the auto-compact threshold, rainy up to 80 % of it, stormy above |
-| `46 min` | Time left on the prompt cache (5 min or 1 h, whichever your session uses), counted from the last response. Green, yellow in the last quarter, red in the last tenth, `abgelaufen` once it has expired |
+| `46 min` | Time left on the prompt cache (5 min or 1 h, whichever your session uses), counted from the last response. Green, yellow in the last quarter, red in the last tenth, `expired` at zero |
 | `hit 90%` | Share of the last response's input tokens served from the cache |
 | `ctx 29%` | How full the context window is |
 | `7d 66%` | Weekly (seven-day) usage limit |

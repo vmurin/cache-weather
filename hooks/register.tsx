@@ -185,7 +185,7 @@ export const register: Register = on => {
     const { Box, Text } = $.ui.resolve(e)
 
     const timer = response === null ? null : countdown(response.respondedAt, cacheTtl.ms, now)
-    const minutesText = timer === null ? '–' : timer.level === 'expired' ? 'abgelaufen' : `${timer.minutes} min`
+    const minutesText = timer === null ? '–' : timer.level === 'expired' ? 'expired' : `${timer.minutes} min`
     const hitText = response?.hitPercent == null ? '–' : `${response.hitPercent}%`
     const ctxText = ctx.percent === null ? '–' : `${ctx.percent}%`
     const hint = trimHint(e.props.hint)
