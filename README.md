@@ -1,6 +1,6 @@
 # cache-weather
 
-A tiny Claude Code plugin that shows the prompt-cache countdown, the cache hit rate, how full the context is and your weekly limit in the **permission-mode line**, the row under the prompt that shows `⏵⏵ auto mode on`. It is not your status line, which it leaves alone.
+A tiny Claude Code mod, installed as a plugin, that shows the prompt-cache countdown, the cache hit rate, how full the context is and your weekly limit in the **permission-mode line**, the row under the prompt that shows `⏵⏵ auto mode on`. It is not your status line, which it leaves alone.
 
 ![The permission-mode line under the Claude Code prompt with the cache-weather segment](docs/hint-line.svg)
 
@@ -18,7 +18,7 @@ A tiny Claude Code plugin that shows the prompt-cache countdown, the cache hit r
 
 There is no new panel or band. The figures go at the end of the row that already shows the permission mode (`⏵⏵ auto mode on`). Claude Code's docs call this row the *status bar*, its plugin API the *prompt hint line*. The mode stays Claude Code's own, in its own colour; only the `(shift+tab to cycle)` reminder is dropped.
 
-It is a different row from the **status line** (`statusLine` in your settings), which sits above it. The plugin does not touch your status line, so you can keep your own.
+It is a different row from the **status line** (`statusLine` in your settings), which sits above it. The mod does not touch your status line, so you can keep your own.
 
 ## Why
 
@@ -51,7 +51,7 @@ claude --plugin-dir .   # run a session with this working copy
 
 ## Keywords
 
-claude-code, claude-code-plugin, prompt-cache, cache-ttl, context-window, auto-compact, token-usage, rate-limit, statusline
+claude-code, claude-code-mod, claude-mod, claude-code-plugin, prompt-cache, cache-ttl, context-window, auto-compact, token-usage, rate-limit, statusline
 
 ## License
 

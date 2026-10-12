@@ -9,6 +9,8 @@
   "repository": "https://github.com/vmurin/cache-weather",
   "license": "MIT",
   "keywords": [
+    "claude-code-mod",
+    "claude-mod",
     "prompt-cache",
     "cache-ttl",
     "context-window",
