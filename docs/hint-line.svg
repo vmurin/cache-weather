@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="950" height="196" viewBox="0 0 950 196" role="img" aria-label="The Claude Code hint line with the cache-weather segment, in four cache states">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 15px; white-space: pre; }
+    .mode { fill: #ffd700; }
+    .dim { fill: #949494; }
+    .fresh { fill: #87d787; }
+    .late { fill: #ffd700; }
+    .critical { fill: #ff87af; }
+  </style>
+  <rect width="950" height="196" rx="10" fill="#0d1117"/>
+  <text x="20" y="38"><tspan class="mode">⏵⏵ auto mode on</tspan><tspan class="dim"> · ☀️ </tspan><tspan class="fresh">46 min</tspan><tspan class="dim"> · hit 90% · ctx 29% · 7d 66% · ⏳︎ 16.10. 08:00</tspan></text>
+  <text x="20" y="80"><tspan class="mode">⏵⏵ auto mode on</tspan><tspan class="dim"> · 🌧️ </tspan><tspan class="late">12 min</tspan><tspan class="dim"> · hit 97% · ctx 52% · 7d 66% · ⏳︎ 16.10. 08:00</tspan></text>
+  <text x="20" y="122"><tspan class="mode">⏵⏵ auto mode on</tspan><tspan class="dim"> · ⛈️ </tspan><tspan class="critical">4 min</tspan><tspan class="dim"> · hit 99% · ctx 81% · 7d 67% · ⏳︎ 16.10. 08:00</tspan></text>
+  <text x="20" y="164"><tspan class="mode">⏵⏵ auto mode on</tspan><tspan class="dim"> · ⛈️ abgelaufen · hit 99% · ctx 81% · 7d 67% · ⏳︎ 16.10. 08:00</tspan></text>
+</svg>

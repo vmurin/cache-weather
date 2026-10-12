@@ -1,0 +1,14 @@
+{
+  "name": "ctx-claude-mod",
+  "description": "cache-weather: prompt-cache countdown, cache hit rate, context weather and weekly limit under the Claude Code prompt.",
+  "owner": {
+    "name": "Vlad Murin"
+  },
+  "plugins": [
+    {
+      "name": "cache-weather",
+      "source": "./",
+      "description": "Prompt-cache countdown, cache hit rate, context weather and weekly limit in the hint line under the prompt."
+    }
+  ]
+}

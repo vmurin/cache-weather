@@ -1,0 +1,21 @@
+{
+  "name": "cache-weather",
+  "version": "0.2.0",
+  "description": "Prompt-cache countdown, cache hit rate and context weather in the hint line under the prompt.",
+  "author": {
+    "name": "Vlad Murin"
+  },
+  "homepage": "https://github.com/vmurin/cache-weather",
+  "repository": "https://github.com/vmurin/cache-weather",
+  "license": "MIT",
+  "keywords": [
+    "prompt-cache",
+    "cache-ttl",
+    "context-window",
+    "auto-compact",
+    "token-usage",
+    "rate-limit",
+    "statusline"
+  ],
+  "types": "./types/index.d.ts"
+}
