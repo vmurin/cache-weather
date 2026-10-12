@@ -67,7 +67,7 @@ for (const surface of SURFACES) {
     await respond($)
     const ui = await mount($, surface)
 
-    expect(await line(ui)).toBe('← 1 agent · ☀️ 5 min · hit 90% · ctx 29% · 7d 66% · \u23F3\uFE0E 16.10. 08:00')
+    expect(await line(ui)).toBe('← 1 agent · ☀️ ctx 29% · 5 min · hit 90% · 7d 66% · \u23F3\uFE0E 16.10. 08:00')
     expect((await ui.find({ type: 'Text', text: '5 min' }))?.props.color).toBe('success')
 
     await clock.advance(4 * 60_000)
@@ -81,13 +81,13 @@ for (const surface of SURFACES) {
 test('a hint of only the mode-cycling reminder leaves the segment alone', async ($, on) => {
   mock.clock(on)
   const ui = await mount($, 'terminal', '(shift+tab to cycle)')
-  expect(await line(ui)).toBe('☀️ – · hit – · ctx –')
+  expect(await line(ui)).toBe('☀️ ctx – · – · hit –')
 })
 
 test('an empty hint (while typing) leaves the segment alone', async ($, on) => {
   mock.clock(on)
   const ui = await mount($, 'terminal', '')
-  expect(await line(ui)).toBe('☀️ – · hit – · ctx –')
+  expect(await line(ui)).toBe('☀️ ctx – · – · hit –')
 })
 
 test('the weather follows the session threshold', async ($, on) => {
@@ -95,7 +95,7 @@ test('the weather follows the session threshold', async ($, on) => {
   answerUsage(on, { tokens: 140_000, window: 200_000, threshold: 167_000 })
   await startSession($, on)
   const ui = await mount($, 'terminal')
-  expect(await line(ui)).toContain('⛈️ – · hit – · ctx 70%')
+  expect(await line(ui)).toContain('⛈️ ctx 70% · – · hit –')
 })
 
 test('without a session threshold it falls back to 83 %', async ($, on) => {
@@ -103,7 +103,7 @@ test('without a session threshold it falls back to 83 %', async ($, on) => {
   answerUsage(on, { tokens: 60_000, window: 100_000 })
   await startSession($, on)
   const ui = await mount($, 'terminal')
-  expect(await line(ui)).toContain('🌧️ – · hit – · ctx 60%')
+  expect(await line(ui)).toContain('🌧️ ctx 60% · – · hit –')
 })
 
 test('the TTL comes from the transcript once the turn has settled on disk', async ($, on) => {

@@ -1,4 +1,5 @@
-// Appends "☀️ 46 min · hit 90% · ctx 29% · 7d 66% · ⏳ 16.10. 08:00" to the hint line under the prompt.
+// Appends "☀️ ctx 29% · 46 min · hit 90% · 7d 66% · ⏳ 16.10. 08:00" to the hint line under the prompt:
+// the weather and the context fill it stands for first, then the cache, then the weekly limit.
 // The engine keeps drawing its own mode pill ("⏵⏵ auto mode on") in front of this tree.
 
 import { atom, read, update } from 'claude-code'
@@ -194,10 +195,11 @@ export const register: Register = on => {
       <Box flexDirection="row">
         {hint === '' ? null : <Text color={HINT_COLOR}>{hint} · </Text>}
         <Text>{WEATHER_EMOJI[weather(ctx.percent, ctx.thresholdPercent)]} </Text>
+        <Text color={HINT_COLOR}>ctx {ctxText} · </Text>
         <Text color={timer === null ? HINT_COLOR : LEVEL_COLOR[timer.level]}>{minutesText}</Text>
         <Text color={HINT_COLOR}>
           {' '}
-          · hit {hitText} · ctx {ctxText}
+          · hit {hitText}
           {week === null ? '' : ` · 7d ${week.percent}%`}
           {week?.resetsAt == null ? '' : ` · ${RESET_ICON} ${formatReset(week.resetsAt)}`}
         </Text>
